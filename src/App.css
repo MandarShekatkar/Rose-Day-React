@@ -1,0 +1,84 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  overflow-x: hidden;
+}
+
+/* Subtle background texture */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* PAGE */
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* padding-top: 80px; */
+  align-items: center; 
+}
+
+/* MAIN STACK */
+.stage {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* 🔑 THIS IS THE MAGIC */
+.envelope-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Replay button */
+.replay-btn {
+  margin-top: 18px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  background: #ff6f91;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.replay-btn:hover {
+  transform: translateY(-2px);
+}
+
+.replay-btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .stage {
+    padding: 0 16px;
+  }
+}
