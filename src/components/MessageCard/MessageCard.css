@@ -7,7 +7,7 @@
   width: 280px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   z-index: 10;
- 
+  animation: breathe 4s ease-in-out infinite;
 }
 
 /* Desktop: float above envelope */
